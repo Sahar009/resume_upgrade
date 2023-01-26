@@ -1,0 +1,53 @@
+.header{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: white;
+    width: 100%;
+}
+
+.header__logo{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: clamp(0.9rem, 2.5vw,1.2rem);
+}
+
+.header__main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.header__links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .header__main{
+        width: 90%;
+    }
+}
+.btn__secondary{
+    position: relative;
+}
+
+.coming__soon{
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.p-badge {
+    border-radius: 6px !important;
+    padding: 0 0.3rem !important;
+    font-size: 0.5rem !important;
+  }
