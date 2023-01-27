@@ -99,26 +99,23 @@ const templateOne = React.forwardRef(({condition}, ref) => {
             <div className={styles.col1}>
             
             <div className={`${styles.section} ${styles.project}`} >
-            <section className="resume__section resume__summary">
-            <div className="resume__content">
+            
             <div className={`${styles.sectionTitle}`} >
             Professional Summary    
                </div>
-        
               <div className={styles.content}>
               <div className={styles.description}>
                   <div  dangerouslySetInnerHTML={{ __html: safeHtml }} />
                 </div>
             </div>
-            </div>
-          </section>
+          
                 </div>
                 </div> 
             
               <div className={styles.col1}>
               <div className={`${styles.section} ${styles.workExp}`}>
               
-         <section className="resume__section resume__experience">
+         
         
             <div className={`${styles.sectionTitle}`} >
                Education        
@@ -156,7 +153,7 @@ const templateOne = React.forwardRef(({condition}, ref) => {
                 </div>
               ))}
           
-          </section>
+         
         
     </div>
               </div>
@@ -309,7 +306,7 @@ const templateOne = React.forwardRef(({condition}, ref) => {
           
           <div className={styles.col1}>
          
-         <section className="resume__section resume__skills">
+        
     <div className="resume__content">
  
             {reference[0].map((value, index) => (
@@ -368,7 +365,6 @@ const templateOne = React.forwardRef(({condition}, ref) => {
                 </div>
               ))}
 </div>
-</section>
 </div>
           
 
