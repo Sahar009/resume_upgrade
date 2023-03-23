@@ -1,7 +1,16 @@
-import React, { useContext } from "react";
+import React,  { useContext } from "react";
 import AppContext from "../../context/AppContext";
 import DOMPurify from "isomorphic-dompurify";
 import moment from "moment";
+import {ImLocation2} from 'react-icons/im'
+import {IoIosCall} from 'react-icons/io'
+import {MdAttachEmail} from 'react-icons/md'
+import {TbWorld} from 'react-icons/tb'
+import { HiHome } from "react-icons/hi";
+import { BiBuilding, BiCalendar } from "react-icons/bi";
+import { CiUser } from "react-icons/ci";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { AiFillMail } from "react-icons/ai";
 
 
 const templateTwo = React.forwardRef(({ condition }, ref) => {
@@ -17,176 +26,194 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
   const { reference, setReference } = useContext(AppContext);
   let safeHtml = DOMPurify.sanitize(summary[0]);
   return (
-    <div ref={ref} className="container">
-      <div className="left_Side">
-        {personal[0].map((value, index) => (
+    <div ref={ref}
+     className={
+      condition ? "two-column resume" : " two-column resume adjustedPreview"
+    }>
+    {personal[0].map((value, index) => (
+    <div ref={ref} className="container" key={index}>
+        
+      <div className="left_Side" >
+      <div className="imgBx">
+                
+      <img src='photo' alt="Profile" type="file" onChange={(event) => handleImage(event)} />
+      
+              </div>
+              <div className='section3'>
+      <div className='profile'>
+        
+      <div className='profiles'>
+        
+        <div className='nameWork'>
+    
+          <h1 className='name' >{value.firstName}</h1>
+          <h1 className='name'>{value.lastName}</h1>
+          <h5 className='name'>{value.title}</h5>
+        </div>
+        <div className='education' >
+          <h3 style={{color: colors[0] ?? '#00eeb5'}}>education</h3>
+        <hr/>
+        {education[0].map((value, index) => (
           <>
-            <div className="profileText">
-              <div className="imgBx">
-                <img className="photo" src="images/image.jpg" />
-              </div>
-              <br />
-              <h2 className={styles.header}>
-                {value.firstName} {value.lastName} <br />
-                <span>{value.title}</span>
-              </h2>
-            </div>
-            <div className="contactInfo">
-              <h3 className="title">Contact Info</h3>
-              <ul>
-                <li>
-                  <span className="icon">
-                    <i className="fa fa-phone" aria-hidden="true"></i>
-                  </span>
-                  <span className="text">{value.phone}</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <i className="fa fa-envelope-o" aria-hidden="true"></i>
-                  </span>
-                  <span className="text">{value.email}</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <i className="pi pi-globe" aria-hidden="true"></i>
-                  </span>
-                  <span className="text">www.mywebsite.com</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <i className="fa fa-linkedin" aria-hidden="true"></i>
-                  </span>
-                  <span className="text">www.linkedin/me</span>
-                </li>
-                <li>
-                  <span className="icon">
-                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  </span>
-                  <span className="text">Moscow, Russia</span>
-                </li>
-              </ul>
-            </div>
+          <h2>{value.degree}</h2>
+          <p>{value.school}</p>
+          <h6 className="date"> {moment(value.startDate).format(
+                        "MMMM YYYY"
+                      )}
+           - {moment(value.endDate).format("MMMM YYYY")}</h6>
+           <p>{value.city}</p>
           </>
-        ))}
-
-        <div className="contactInfo language">
-          <h3 className="title">Languages</h3>
-          <ul>
-            {language[0].map((value, index) => (
-              <li key={index}>
-                <span className="text">{value.language}</span>
-                <span className="percent">
-                  <div className="englishw50"></div>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="right_Side">
-        <div className="about">
-          <h2 className="title2">Profile</h2>
-          <div dangerouslySetInnerHTML={{ __html: safeHtml }} />
-        </div>
-        <div className="about">
-          <h2 className="title2">Education</h2>
-          {education[0].map((value, index) => (
-            <div className="box" key={index}>
-              <div className="year_company">
-                <h5>{moment(value.startDate).format(
-                        "MMMM YYYY"
-                      )}
-                      - {moment(value.endDate).format("MMMM YYYY")}</h5>
-                <h5 className="small py-1">{value.degree}</h5>
-              </div>
-              <div className="text">
-                <h4>{value.school}</h4>
-                <p className="py-1">
-                {value.description}
-                </p>
-              </div>
-            </div>
           ))}
         </div>
-        <div className="about">
-          <h2 className="title2">Experience</h2>
-          {employment[0].map((value, index) => (
-            <div className="box" key={index}>
-              <div className="year_company">
-                <h5>{moment(value.startDate).format(
-                        "MMMM YYYY"
-                      )}
-                      - {moment(value.endDate).format("MMMM YYYY")}</h5>
-                <h5 className="small py-1">{value.employer}</h5>
-              </div>
-              <div className="text">
-                <h4>{value.title}</h4>
-                <p className="py-1">
-                {value.description}
-                </p>
-              </div>
-            </div>
-          ))}
+        
+        <div className='hobbies'>
+        <h3 style={{color: colors[0] ?? '#00eeb5'}}> SKILLS</h3>
+        <hr/>
+        {skill[0].map((value, index) => (
+          
+        <p>{value.name}</p>
+        
+    
+    ))}
+         
         </div>
-        <div className="about skills">
-          <h2 className="title2">Professionals skills</h2>
-          <div className="box">
-            <h4>HTML</h4>
-            <div className="percent">
-              <div className="htmlws30"></div>
-            </div>
-          </div>
-          <div className="box">
-            <h4>CSS</h4>
-            <div className="percent">
-              <div className="cssws45"></div>
-            </div>
-          </div>
-          <div className="box">
-            <h4>JavaScript</h4>
-            <div className="percent">
-              <div className="jsws70"></div>
-            </div>
-          </div>
-          <div className="box">
-            <h4>Photoshop</h4>
-            <div className="percent">
-              <div className="phws40"></div>
-            </div>
-          </div>
-          <div className="box">
-            <h4>Illustrator</h4>
-            <div className="percent">
-              <div className="ilws60"></div>
-            </div>
-          </div>
-          <div className="box">
-            <h4>Adobe XD</h4>
-            <div className="percent">
-              <div className="adw70"></div>
-            </div>
-          </div>
-        </div>
-        <div className="about interest">
-          <h2 className="title2">Interests</h2>
-          <ul>
-            <li>
-              <i className="fa fa-book" aria-hidden="true"></i> Reading
-            </li>
-            <li>
-              <i className="fa fa-gamepad" aria-hidden="true"></i> Gaming
-            </li>
-            <li>
-              <i className="fa fa-cutlery" aria-hidden="true"></i> Cooking
-            </li>
-            <li>
-              <i className="fa fa-microphone" aria-hidden="true"></i> Singing
-            </li>
-          </ul>
-        </div>
+        <div className="languages">
+        <h3 style={{color: colors[0] ?? '#00eeb5'}}>Languages</h3>
+        <hr/>
+        {language[0].map((value, index) => (
+                <div  key={index}>
+                    <p>{value.language}</p>
+                    <br></br>
+                    <small>{value.level}</small>
+                 
+                </div>
+              ))}
+        
       </div>
+      </div>
+      
+    
+ 
     </div>
+
+      
+    </div>
+   
+      </div>
+      
+            <div className="body">
+            
+            
+    <div className='objective'>
+    
+      <h1>OBJECTIVE</h1> 
+      <hr/>
+      <p dangerouslySetInnerHTML={{ __html: safeHtml }} >
+      
+     
+     </p>
+    
+    </div>
+    
+    
+
+    <div className='section2'>
+    
+    <div className='section2s'>
+    <h1>Contact</h1>
+    <hr/>
+    
+    <div className='add'>
+    <HiHome className="icons" style={{color: colors[0] ?? '#5695cd'}}/>
+    <p>{value.address}</p>
+   
+    </div>
+    
+ 
+    <div className='tel'>
+    <IoIosCall className='icons' style={{color: colors[0] ?? '#5695cd'}}/>
+    <p>{value.phone}</p>
+    </div>
+
+    <div className='email'>
+    <MdAttachEmail className='icons' style={{color: colors[0] ?? '#5695cd'}} />
+    <p>{value.email}</p>
+    </div>
+
+    {/* <div className='web'>
+    <TbWorld className='icons'style={{color: colors[0] ?? '#5695cd'}}/>
+    <p>{value.country}</p>
+    </div> */}
+    </div>
+    </div>
+    <div className="section4">
+    <div className='employment'>
+        <h1>Employment History</h1>
+        <hr/>
+        {employment[0].map((value, index) => (
+          <div>
+            <h2>{value.title}</h2>
+            <h3>{value.employer}</h3>
+            <h3>{value.city}</h3>
+        <div className='date'
+                  style={{
+                    color: colors[0] ?? "#5695cd",
+                  }}>
+                     <BiCalendar style={{color: colors[0] ?? '#5695cd'}} />
+                  {moment(value.startDate).format(
+                        "MMMM YYYY"
+                      )}
+                      - {moment(value.endDate).format("MMMM YYYY")}
+                  </div>
+                  <div className='description'>
+                  <p>{value.description}</p>
+                  </div>
+                  </div>
+                  ))}
+                  
+      </div>
+      <div className='skills'>
+    <h1>Hobbies</h1>
+        <hr/>
+        <p className='hr'>{hobbies[0]}</p>
+        
+        
+      </div>
+      <div className='skills'>
+      
+    <h1>Reference</h1>
+        <hr/>
+       <div>
+       {reference[0].map((value, index)=>(
+        
+        <div key={index}>
+        
+        
+        <h3>{value.name}</h3>
+        <h3>{value.comapny}</h3>
+        <h3>{value.phone}</h3>
+        </div>
+))}
+       </div>
+      
+      </div>
+    
+      </div>
+
+    
+    </div>
+    
+        
+   
+      
+      </div>
+      ))}
+      </div>
+  
+
+      
   );
+  
 });
 
 export default templateTwo;

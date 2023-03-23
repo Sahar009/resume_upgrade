@@ -12,16 +12,17 @@ export default function colors() {
   return (
     <div className="colors">
       <button
-        className="btn__color yellow"
-        onClick={() => handleColor("#fff66d")}
+        className="btn__color black"
+        onClick={() => handleColor("#000000")}
       ></button>
       <button
-        className="btn__color green"
-        onClick={() => handleColor("#4bfbba")}
+        className="btn__color red"
+        onClick={() => handleColor("#eb5844")}
       ></button>
+      
       <button
         className="btn__color blue"
-        onClick={() => handleColor("#9aebfe")}
+        onClick={() => handleColor("#3ad1f4")}
       ></button>
       <button
         className="btn__color gold"
@@ -29,7 +30,7 @@ export default function colors() {
       ></button>
       <button
         className="btn__color gray"
-        onClick={() => handleColor("#e4e4e4")}
+        onClick={() => handleColor("#737373")}
       ></button>
     </div>
   );

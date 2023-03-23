@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Accordion, AccordionTab } from "primereact/accordion";
 import { Tooltip } from "primereact/tooltip";
+import { Editor } from "primereact/editor";
 import moment from "moment";
 import AppContext from "../../context/AppContext";
 export default function employmentHistory() {
@@ -151,6 +152,7 @@ const handleWorkInput = (index, event) => {
                     handleWorkInput(index, event)
                   }
                 />
+                 
               </div>
             </div>
           </div>

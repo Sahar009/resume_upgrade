@@ -1,11 +1,9 @@
-import React, { useContext,useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Accordion, AccordionTab } from "primereact/accordion";
 import { Tooltip } from "primereact/tooltip";
-import AppContext from "../../context/AppContext";
 
 export default function reference() {
-  const { reference, setReference } = useContext(AppContext);
-  const [refFields, setRefFields] = reference;
+  const [refFields, setRefFields] = useState([]);
 
   //   Reference Buttons
   const handleRefInput = (index, event) => {

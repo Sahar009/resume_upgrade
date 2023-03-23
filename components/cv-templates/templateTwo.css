@@ -1,0 +1,443 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"),
+    url("https://fonts.gstatic.com/s/opensans/v16/mem8YaGs126MiZpBA-UFVZ0b.woff2")
+      format("woff2");
+}
+@page {
+  size: A4;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 20rem 4rem 22rem 40rem
+}
+.container .left_Side {
+  position: relative;
+  background-color:black;
+  display: block;
+  grid-row: 1/span 4 ;
+ max-height:100%; 
+}
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.imgBx {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 1rem;
+  height: 20rem;
+}
+ .imgBx img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+.photo {
+  width: 100%;
+  height: auto;
+}
+.profileText h2 {
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.4em;
+}
+
+.contactInfo {
+  padding-top: 40px;
+}
+.title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.skills h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+
+}
+.skills p{
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+
+
+/*  dellaware */
+
+
+
+
+.body {
+  line-height: 1.5;
+  margin: 1rem;
+  max-width:95%;
+  min-height: 25rem;
+  grid-row: 100%;
+  
+}
+/*  ------------- SECTION 1 --------------- */
+.section1 {
+  display: flex;
+ 
+}
+.objective {
+  padding-top: 1rem;
+  width:100%;
+  position: relative;
+  max-height: 25rem;
+  word-wrap: wrap;
+  word-break: break-all;
+ 
+  
+}
+.objectives {
+  height: 100%;
+}
+.objective p {
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  color: black;
+}
+
+.objective hr {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.596);
+  max-width: 12rem;
+  height: 2px;
+  margin: 1rem 2rem ;
+}
+.objective h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+}
+
+/*  ------------- SECTION 2 --------------- */
+.section2 {
+
+
+  align-items: center;
+  max-width: 100%;
+ min-width: 100%;
+  min-height: 10rem;
+
+  
+}
+.section2s {
+  display: block;
+  justify-content: space-between;
+  text-transform: capitalize;
+  gap: 1em;
+  max-width: 100%;
+  min-width: 20%;
+}
+.section2s h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.section2s  hr {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.596);
+  max-width: 12rem;
+  height: 2px;
+  margin: 1rem 2rem ;
+  
+}
+.section2 p {
+position: relative;
+padding-top: 0.7rem;
+font-size: 1em;
+font-weight: 600;
+color: rgb(0, 0, 0);
+text-transform: capitalize;
+display: inline-block;
+max-width: 90%;
+word-wrap: break-all;
+flex-wrap: wrap;
+word-wrap: break-word;
+}
+
+.section2 .icons {
+font-size: 2.1rem;
+padding-top: 12px;
+justify-content: space-around;
+color: rgb(0, 0, 0);
+}
+
+.tel, .add, .email,.web{
+  display: flex;
+  max-width: 100%;
+  max-height: 8rem;
+}
+
+
+/*  ------------- SECTION 3 --------------- */
+.section3 {
+  padding-top: 1rem;
+  position: relative;
+  grid-column: 2/span 1;
+ height: 100%;
+
+}
+.profile hr {
+  display: flex;
+  max-width: 13rem;
+  margin: 0.5rem 0 0.8rem 0;
+
+}
+.profile p{
+  color: rgb(172, 167, 167);
+}
+.profile {
+  color: white;
+  width: 100%;
+  height: inherit
+}
+.profiles {
+  text-align: right;
+  padding: 0 2rem;
+}
+.skills{
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.skills h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.skills hr {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.596);
+  max-width: 12rem;
+  height: 2px;
+  margin: 1rem 2rem ;
+}
+.nameWork {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.nameWork h1 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+ .nameWork h5 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: rgb(172, 167, 167);
+}
+.education{
+  position: relative;
+  
+}
+.education h3 {
+  font-size: 0.9em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #00eeb5;
+  word-wrap: break-word;
+}
+.education h2 {
+  font-size: 0.9rem;
+  font-weight:500;
+  color: #00eeb5;
+  padding-top: 15px;
+}
+.education h6{
+  
+  display: flex;
+  font-size: 0.9rem;
+  font-weight:400;
+  color: #00eeb5;
+  word-wrap: break-word;
+}
+.education p {
+  font-size: 0.9rem;
+  color: rgb(172, 167, 167);
+  word-wrap: break-word;
+}
+.hobbies{
+  position: relative;
+  height: 100%;
+}
+  
+.hobbies h3{
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #00eeb5;
+  word-break: break-all;
+}
+.hobbies p {
+  display: block;
+  font-size: 1rem;
+  color: rgb(172, 167, 167);
+}
+/* .hobbies p.hr::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ margin: 0 0.8rem;
+  flex-direction: row;
+  content: "";
+  transform: translate(-5px);
+  background-color: white;
+  width: 1px;
+  height: 1rem;
+  color: rgb(172, 167, 167);
+} */
+.hobbies small{
+  font-size: 0.8rem;
+}
+.languages{
+  position: relative;
+  
+}
+.languages h3{
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #00eeb5;
+  word-break: break-all;
+}
+.languages p {
+  display: flex;
+  float: right;
+  font-size: 1rem;
+  color: rgb(172, 167, 167);
+}
+.section4{
+  padding-top: 1rem;
+  position: relative;
+  
+  grid-row: 3/span 4;
+}
+.employment{
+  position: relative;
+ 
+ 
+  width: 100%;
+  height: 100%;
+ 
+}
+.employment h2 {
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+.employment h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+}
+.employment h3{
+  font-size: 1.1em;
+
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+.employment .date{
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  gap:  0.5rem;
+  
+}
+.employment .description{
+  margin-bottom: 1rem;
+}
+.employment .description p{
+  font-size: 0.8rem;
+  font-weight: 500;
+  word-wrap: wrap;
+  line-height: 2;
+  word-break: break-all;
+ 
+}
+.employment hr {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.596);
+  max-width: 12rem;
+  height: 2px;
+  margin: 1rem 2rem ;
+}
+
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+  }
+  .objective h1{
+    font-size:smaller;
+  }
+  .objective p{
+    font-size: smaller;
+  }
+  .section4 h1{
+    font-size: small;
+
+  }
+  .section2{
+    max-width: 100%;
+  }
+  .section2s p, h2, h3{
+   font-size: small;
+  
+   
+  }
+  .section2s h1{
+    font-size: small;
+  }
+  .nameWork{
+    font-size:50%;
+  }
+  .profiles h3,p, h2{
+    font-size:65%
+  }
+  
+
+  
+  
+
+}
+
+  
+@media screen and (max-width: 560px) {
+.objective h1{
+    font-size: 10px;
+  }
+  
+  
+  
+
+}

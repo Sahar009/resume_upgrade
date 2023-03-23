@@ -24,7 +24,7 @@ export default function education() {
       city: "",
       startDate: "",
       endDate: "",
-      description: "",
+      // description: "",
     };
     setEduFields([...eduFields, newfield]);
   };
@@ -135,7 +135,7 @@ export default function education() {
                 />
               </div>
             </div>
-            <div className="full__form pt-3">
+            {/* <div className="full__form pt-3">
               <div className="form__group">
                 <label htmlFor="">Description</label>
                 <textarea
@@ -148,7 +148,7 @@ export default function education() {
                   }
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </AccordionTab>
       </Accordion>

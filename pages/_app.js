@@ -18,8 +18,8 @@ import "../components/cv-templates/templateOne";
 import "../components/cv-templates/templateTwo";
 import "../components/cv-templates/templateThree";
 import "../components/cv-templates/templateFour";
-import "../components/cv-templates/templateOne.module.css";
-import "../components/cv-templates/templateTwo.module.css";
+// import "../components/cv-templates/templateOne.css";
+import "../components/cv-templates/templateTwo.css";
 import "../components/cv-templates/templateThree.css";
 import "../components/cv-templates/templateFour.css";
 
