@@ -36,7 +36,7 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
       <div className="left_Side" >
       <div className="imgBx">
                 
-      <img src='photo' alt="Profile" type="file" onChange={(event) => handleImage(event)} />
+      {/* <img src='photo' alt="Profile" type="file" onChange={(event) => handleImage(event)} /> */}
       
               </div>
               <div className='section3'>
