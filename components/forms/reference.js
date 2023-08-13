@@ -55,7 +55,9 @@ export default function Reference() {
             <div className="accordion-tab">
               <div className="main__form ">
                 <div className="form__group">
-                  <label htmlFor="">Referent's Full Name</label>
+                <label htmlFor="">Referent&apos;s Full Name</label>
+
+
                   <input
                     type="text"
                     name="name"

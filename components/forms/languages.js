@@ -67,8 +67,8 @@ export default function Languages() {
                       id=""
                       onChange={(event) => handleLangInput(index, event)}
                     >
-                      {languageLevel.map((data) => (
-                        <option value={data.level} label={data.level}></option>
+                      {languageLevel.map((data,index) => (
+                        <option key={index} value={data.level} label={data.level}></option>
                       ))}
                     </select>
                   </div>

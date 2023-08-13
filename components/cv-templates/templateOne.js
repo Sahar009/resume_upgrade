@@ -172,7 +172,7 @@ const templateOne = React.forwardRef(function TemplateOne({condition}, ref) {
             
               
               {employment[0].map((value, index) => (
-                <div className={styles.content}>
+                <div className={styles.content} key={index}>
                 <div className={styles.edsection} key={index}>
                    
  

@@ -71,7 +71,7 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
         <hr/>
         {skill[0].map((value, index) => (
           
-        <p>{value.name}</p>
+        <p key={index}>{value.name}</p>
         
     
     ))}
@@ -151,7 +151,7 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
         <h1>Employment History</h1>
         <hr/>
         {employment[0].map((value, index) => (
-          <div>
+          <div key={index}>
             <h2>{value.title}</h2>
             <h3>{value.employer}</h3>
             <h3>{value.city}</h3>
