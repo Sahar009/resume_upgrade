@@ -3,7 +3,7 @@ import { AutoComplete } from "primereact/autocomplete";
 import { skills } from "../skills";
 import AppContext from "../../context/AppContext";
 
-export default function skillComponent() {
+export default function SkillComponent() {
   const { skill, setSkill } = useContext(AppContext);
   const [filteredSkill, setFilteredSkill] = useState();
   const [selectedSkill, setSelectedSkill] = skill

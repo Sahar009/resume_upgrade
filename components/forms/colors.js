@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import AppContext from "../../context/AppContext";
 
-export default function colors() {
+export default function Colors() {
   const { colors, setColors } = useContext(AppContext);
   const [color, setColor] = colors;
 

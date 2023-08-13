@@ -18,7 +18,7 @@ import { Calendar } from "react-feather";
 AiFillMail
 import {AiFillMail} from 'react-icons/ai'
 
-const templateOne = React.forwardRef(({condition}, ref) => {
+const templateOne = React.forwardRef(function TemplateOne({condition}, ref) {
   const { employment, setEmployment } = useContext(AppContext);
   const { summary, setSummary } = useContext(AppContext);
   const { personal, setPersonal } = useContext(AppContext);
@@ -104,8 +104,8 @@ const templateOne = React.forwardRef(({condition}, ref) => {
             Professional Summary    
                </div>
               <div className={styles.content}>
-              <div className={styles.description}>
-                  <div  dangerouslySetInnerHTML={{ __html: safeHtml }} />
+              <div >
+                  <div className={styles.description}  dangerouslySetInnerHTML={{ __html: safeHtml }} />
                 </div>
             </div>
           
@@ -121,7 +121,7 @@ const templateOne = React.forwardRef(({condition}, ref) => {
                Education        
                </div>
               {education[0].map((value, index) => (
-                <div className={styles.content}>
+                <div className={styles.content} key={index}>
                 <div className={styles.edsection} key={index}>
                   
                   <div className={styles.title}><FaUserGraduate className={styles.icon} style={{color: colors[0] ?? '#5695cd'}}/>
@@ -228,7 +228,7 @@ const templateOne = React.forwardRef(({condition}, ref) => {
                       style={{color: colors[0] ?? '#5695cd'}}
                       href={value.link}
 
-
+                      rel="noopener noreferrer" 
                       target="_blank"
                     >
                       <FiLink className={styles.icon}/>
@@ -380,5 +380,5 @@ const templateOne = React.forwardRef(({condition}, ref) => {
   </div>
 )});
 
-
+templateOne.displayName = "TemplateOne";
 export default templateOne;

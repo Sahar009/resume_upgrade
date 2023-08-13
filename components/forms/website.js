@@ -3,7 +3,7 @@ import { Accordion, AccordionTab } from "primereact/accordion";
 import { Tooltip } from "primereact/tooltip";
 import AppContext from "../../context/AppContext";
 
-export default function website() {
+export default function Website() {
   const { website, setWebsite } = useContext(AppContext);
   const [linksFields, setLinkFields] = website;
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { Editor } from "primereact/editor";
 import AppContext from '../../context/AppContext';
 
-export default function professioanalSumary() {
+export default function ProfessioanalSumary() {
 
   const { summary, setSummary } = useContext(AppContext);
   const [professional, setProfessional] = summary;

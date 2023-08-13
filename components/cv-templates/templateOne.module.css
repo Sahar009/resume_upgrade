@@ -206,13 +206,15 @@
   word-spacing: 1.5px;
   line-height: 1.4em;
   font-weight: 500;
-  width: 90%;
-  margin:0 0 0 15px;
+  width: 100%;
+  
+  
   color: #555;
   padding: 1px;
   border-top: 0.5px dotted rgba(0, 0, 0, 0.047);
   border-bottom:  0.5px dotted rgba(0, 0, 0, 0.045);
 }
+
 .content .description li{
   list-style: none;
 }

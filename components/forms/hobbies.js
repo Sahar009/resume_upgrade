@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import AppContext from "../../context/AppContext";
 
-export default function hobbies() {
+export default function Hobbies() {
     const { hobbies, setHobbbies } = useContext(AppContext);
     const [hobby, setHobbby] = hobbies
 

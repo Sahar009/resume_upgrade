@@ -54,7 +54,7 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
           <h3 style={{color: colors[0] ?? '#00eeb5'}}>education</h3>
         <hr/>
         {education[0].map((value, index) => (
-          <>
+          <div key={index}>
           <h2>{value.degree}</h2>
           <p>{value.school}</p>
           <h6 className="date"> {moment(value.startDate).format(
@@ -62,7 +62,7 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
                       )}
            - {moment(value.endDate).format("MMMM YYYY")}</h6>
            <p>{value.city}</p>
-          </>
+          </div>
           ))}
         </div>
         
@@ -215,5 +215,5 @@ const templateTwo = React.forwardRef(({ condition }, ref) => {
   );
   
 });
-
+templateTwo.displayName = "TemplateTwo";
 export default templateTwo;

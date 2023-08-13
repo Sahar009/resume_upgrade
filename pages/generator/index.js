@@ -17,7 +17,7 @@ import TemplateTwo from "../../components/cv-templates/templateTwo";
 import Image from 'next/image'
 import { BsFillLockFill } from "react-icons/bs";
 
-export default function index() {
+function Index() {
   const componentRef = useRef();
   const [title, setTitle] = useState("Untitled");
   
@@ -200,3 +200,4 @@ export default function index() {
     </div>
   );
 }
+export default Index;

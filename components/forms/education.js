@@ -5,7 +5,7 @@ import moment from "moment";
 import AppContext from "../../context/AppContext";
 
 
-export default function education() {
+export default function Education() {
 
   const { education, setEducation } = useContext(AppContext);
   const [eduFields, setEduFields] = education;

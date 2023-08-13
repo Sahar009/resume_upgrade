@@ -4,7 +4,7 @@ import { Tooltip } from "primereact/tooltip";
 import { Editor } from "primereact/editor";
 import moment from "moment";
 import AppContext from "../../context/AppContext";
-export default function employmentHistory() {
+export default function EmploymentHistory() {
 
   const { employment, setEmployment } = useContext(AppContext);
   const [workFields, setWorkFields] = employment

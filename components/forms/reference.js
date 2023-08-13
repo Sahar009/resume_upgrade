@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Accordion, AccordionTab } from "primereact/accordion";
 import { Tooltip } from "primereact/tooltip";
 
-export default function reference() {
+export default function Reference() {
   const [refFields, setRefFields] = useState([]);
 
   //   Reference Buttons

@@ -4,7 +4,7 @@ import { Tooltip } from "primereact/tooltip";
 import { languageLevel } from "../skills";
 import AppContext from "../../context/AppContext";
 
-export default function languages() {
+export default function Languages() {
   const { language, setLanguage } = useContext(AppContext);
   const [langFields, setLangFields] = language;
 
